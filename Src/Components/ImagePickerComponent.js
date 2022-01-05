@@ -39,7 +39,7 @@ const ImagePickerComponent = () => {
         justifyContent: "center",
         alignItems: "center",
         // backgroundColor: "black",
-        width: "32%",
+        width: 115,
         height: 95,
       }}
     >
