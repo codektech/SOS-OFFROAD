@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
+import BottomlocatoionModal from "./Src/Components/BottomlocatoionModal";
 import DropdownInput from "./Src/Components/DropdownInput";
 import ImagePickerComponent from "./Src/Components/ImagePickerComponent";
 import StatusComponent from "./Src/Components/StatusComponent";
@@ -19,6 +20,7 @@ export default function App() {
       {/* <Text>hi</Text> */}
       {/* <StatusComponent /> */}
       <TopHeader />
+      <BottomlocatoionModal />
       <StatusBar style="auto" />
     </View>
   );
@@ -27,7 +29,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "grey",
     alignItems: "center",
     // justifyContent: "center",
   },
