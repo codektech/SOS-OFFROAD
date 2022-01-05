@@ -35,28 +35,24 @@ const ImagePickerComponent = () => {
   return (
     <TouchableOpacity
       onPress={pickImage}
-      style={{ justifyContent: "center", alignItems: "center" }}
+      style={{
+        justifyContent: "center",
+        alignItems: "center",
+        // backgroundColor: "black",
+        width: "32%",
+        height: 95,
+      }}
     >
       {imagepicked ? (
-        <View
-          style={{
-            width: "100%",
-            height: "100%",
-            justifyContent: "center",
-            alignItems: "center",
+        <Image
+          source={{
+            uri: image,
           }}
-        >
-          <Text>hi</Text>
-          <Image
-            source={{
-              uri: image,
-            }}
-            style={{
-              height: 60,
-              width: 75,
-            }}
-          />
-        </View>
+          style={{
+            height: "100%",
+            width: "100%",
+          }}
+        />
       ) : (
         <>
           <Image source={require("../Images/Background.png")} />
