@@ -5,6 +5,7 @@ import ImagePickerComponent from "./Src/Components/ImagePickerComponent";
 import StatusComponent from "./Src/Components/StatusComponent";
 import TextInputComponent from "./Src/Components/TextInputComponent";
 import TextInputsInRow from "./Src/Components/TextInputsInRow";
+import TopHeader from "./Src/Components/TopHeader";
 import TouchableButton from "./Src/Components/TouchableButton";
 export default function App() {
   return (
@@ -15,8 +16,9 @@ export default function App() {
       {/* <TextInputsInRow /> */}
       {/* <DropdownInput /> */}
       {/* <ImagePickerComponent /> */}
-      <Text>hi</Text>
-      <StatusComponent />
+      {/* <Text>hi</Text> */}
+      {/* <StatusComponent /> */}
+      <TopHeader />
       <StatusBar style="auto" />
     </View>
   );
@@ -27,6 +29,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center",
+    // justifyContent: "center",
   },
 });
