@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import DropdownInput from "./Src/Components/DropdownInput";
+import ImagePickerComponent from "./Src/Components/ImagePickerComponent";
 import TextInputComponent from "./Src/Components/TextInputComponent";
 import TextInputsInRow from "./Src/Components/TextInputsInRow";
 import TouchableButton from "./Src/Components/TouchableButton";
@@ -10,8 +11,9 @@ export default function App() {
       {/* <TouchableButton icon={true} />
       <TextInputComponent />
       <TextInputComponent icon={true} /> */}
-      <TextInputsInRow />
-      <DropdownInput />
+      {/* <TextInputsInRow /> */}
+      {/* <DropdownInput /> */}
+      <ImagePickerComponent />
       <StatusBar style="auto" />
     </View>
   );
