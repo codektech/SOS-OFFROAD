@@ -66,7 +66,7 @@ const BottomlocatoionModal = () => {
                 height: "65%",
               }}
             >
-              <ScrollView showsHorizontalScrollIndicator={false}>
+              <ScrollView showsVerticalScrollIndicator={false}>
                 <Text style={{ fontSize: 13 }}>
                   This is the Description of case will be written by user This
                   is the Description of case will be written by user This is the
@@ -113,7 +113,7 @@ const BottomlocatoionModal = () => {
               justifyContent: "center",
             }}
           >
-            <Text style={{ color: "whites" }}>ACCEPT</Text>
+            <Text style={{ color: "white" }}>ACCEPT</Text>
           </TouchableOpacity>
         </View>
       </View>
