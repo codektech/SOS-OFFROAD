@@ -5,6 +5,7 @@ import CaseDetailsTopHeader from "./Src/Components/CaseDetailsTopHeader";
 import CaseNumber from "./Src/Components/CaseNumber";
 import DropdownInput from "./Src/Components/DropdownInput";
 import ImagePickerComponent from "./Src/Components/ImagePickerComponent";
+import ImagesFlatlist from "./Src/Components/ImagesFlatlist";
 import InviteandSupportComponent from "./Src/Components/InviteandSupportComponent";
 import StatusComponent from "./Src/Components/StatusComponent";
 import TextInputComponent from "./Src/Components/TextInputComponent";
@@ -26,6 +27,7 @@ export default function App() {
       <CaseDetailsTopHeader />
       <CaseNumber />
       <InviteandSupportComponent />
+      <ImagesFlatlist />
       {/* <BottomlocatoionModal /> */}
       <StatusBar style="auto" />
     </View>
