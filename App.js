@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
+import BottomDrawerCases from "./Src/Components/BottomDrawerCases";
 import BottomlocatoionModal from "./Src/Components/BottomlocatoionModal";
 import CaseDetailsTopHeader from "./Src/Components/CaseDetailsTopHeader";
 import CaseNumber from "./Src/Components/CaseNumber";
@@ -41,8 +42,9 @@ export default function App() {
       >
         <CaseNumber />
       </View> */}
-      <ProfileView />
-      <Personalinformation />
+      {/* <ProfileView /> */}
+      <BottomDrawerCases />
+      {/* <Personalinformation /> */}
       {/* <CasesFlatlist /> */}
       {/* <CompletedComponent /> */}
       {/* <InviteandSupportComponent /> */}
