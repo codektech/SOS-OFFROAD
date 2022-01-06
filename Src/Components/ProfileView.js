@@ -1,18 +1,26 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 
 const ProfileView = () => {
   return (
     <View
       style={{
-        height: "20%",
-        width: "80%",
+        height: "15%",
+        width: "90%",
         flexDirection: "row",
-        justifyContent: "space-between",
-        backgroundColor: "green",
+        // justifyContent: "space-",
+        // backgroundColor: "green",
+        marginTop: 30,
+        alignItems: "center",
       }}
     >
-      <Text></Text>
+      <Image
+        source={require("../Images/car1.jpg")}
+        style={{ height: 90, width: 90, borderRadius: 25 }}
+      />
+      <Text style={{ marginLeft: 20, fontSize: 19, fontWeight: "bold" }}>
+        User Name here
+      </Text>
     </View>
   );
 };

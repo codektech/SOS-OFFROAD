@@ -10,6 +10,7 @@ import ImagePickerComponent from "./Src/Components/ImagePickerComponent";
 import ImagesFlatlist from "./Src/Components/ImagesFlatlist";
 import InviteandSupportComponent from "./Src/Components/InviteandSupportComponent";
 import LocationDetailsComponent from "./Src/Components/LocationDetailsComponent";
+import ProfileView from "./Src/Components/ProfileView";
 import StatusComponent from "./Src/Components/StatusComponent";
 import SupportButton from "./Src/Components/SupportButton";
 import TextInputComponent from "./Src/Components/TextInputComponent";
@@ -39,8 +40,9 @@ export default function App() {
       >
         <CaseNumber />
       </View> */}
-      <CasesFlatlist />
-      <CompletedComponent />
+      <ProfileView />
+      {/* <CasesFlatlist /> */}
+      {/* <CompletedComponent /> */}
       {/* <InviteandSupportComponent /> */}
       {/* <ImagesFlatlist /> */}
       {/* <LocationDetailsComponent /> */}
