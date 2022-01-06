@@ -4,6 +4,7 @@ import BottomlocatoionModal from "./Src/Components/BottomlocatoionModal";
 import CaseDetailsTopHeader from "./Src/Components/CaseDetailsTopHeader";
 import CaseNumber from "./Src/Components/CaseNumber";
 import CasesFlatlist from "./Src/Components/CasesFlatlist";
+import CompletedComponent from "./Src/Components/CompletedComponent";
 import DropdownInput from "./Src/Components/DropdownInput";
 import ImagePickerComponent from "./Src/Components/ImagePickerComponent";
 import ImagesFlatlist from "./Src/Components/ImagesFlatlist";
@@ -39,6 +40,7 @@ export default function App() {
         <CaseNumber />
       </View> */}
       <CasesFlatlist />
+      <CompletedComponent />
       {/* <InviteandSupportComponent /> */}
       {/* <ImagesFlatlist /> */}
       {/* <LocationDetailsComponent /> */}
