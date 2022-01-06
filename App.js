@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import BottomlocatoionModal from "./Src/Components/BottomlocatoionModal";
 import CaseDetailsTopHeader from "./Src/Components/CaseDetailsTopHeader";
 import CaseNumber from "./Src/Components/CaseNumber";
+import CasesFlatlist from "./Src/Components/CasesFlatlist";
 import DropdownInput from "./Src/Components/DropdownInput";
 import ImagePickerComponent from "./Src/Components/ImagePickerComponent";
 import ImagesFlatlist from "./Src/Components/ImagesFlatlist";
@@ -26,7 +27,7 @@ export default function App() {
       {/* <StatusComponent /> */}
       {/* <TopHeader /> */}
       <CaseDetailsTopHeader />
-      <View
+      {/* <View
         style={{
           position: "absolute",
           marginTop: 120,
@@ -36,13 +37,14 @@ export default function App() {
         }}
       >
         <CaseNumber />
-      </View>
-      <InviteandSupportComponent />
-      <ImagesFlatlist />
-      <LocationDetailsComponent />
+      </View> */}
+      <CasesFlatlist />
+      {/* <InviteandSupportComponent /> */}
+      {/* <ImagesFlatlist /> */}
+      {/* <LocationDetailsComponent /> */}
       {/* <BottomlocatoionModal /> */}
-      <TouchableButton icon={true} />
-      <SupportButton />
+      {/* <TouchableButton icon={true} /> */}
+      {/* <SupportButton /> */}
       <StatusBar style="auto" />
     </View>
   );
