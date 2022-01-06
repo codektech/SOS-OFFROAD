@@ -13,7 +13,14 @@ const CaseNumber = () => {
         justifyContent: "center",
       }}
     >
-      <Text style={{ fontWeight: "bold", fontSize: 17, color: "black" }}>
+      <Text
+        style={{
+          fontWeight: "bold",
+          fontSize: 17,
+          color: "black",
+          marginLeft: 10,
+        }}
+      >
         Case#1111111
       </Text>
     </View>

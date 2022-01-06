@@ -7,7 +7,9 @@ import DropdownInput from "./Src/Components/DropdownInput";
 import ImagePickerComponent from "./Src/Components/ImagePickerComponent";
 import ImagesFlatlist from "./Src/Components/ImagesFlatlist";
 import InviteandSupportComponent from "./Src/Components/InviteandSupportComponent";
+import LocationDetailsComponent from "./Src/Components/LocationDetailsComponent";
 import StatusComponent from "./Src/Components/StatusComponent";
+import SupportButton from "./Src/Components/SupportButton";
 import TextInputComponent from "./Src/Components/TextInputComponent";
 import TextInputsInRow from "./Src/Components/TextInputsInRow";
 import TopHeader from "./Src/Components/TopHeader";
@@ -15,8 +17,7 @@ import TouchableButton from "./Src/Components/TouchableButton";
 export default function App() {
   return (
     <View style={styles.container}>
-      {/* <TouchableButton icon={true} />
-      <TextInputComponent />
+      {/* <TextInputComponent />
       <TextInputComponent icon={true} /> */}
       {/* <TextInputsInRow /> */}
       {/* <DropdownInput /> */}
@@ -25,10 +26,23 @@ export default function App() {
       {/* <StatusComponent /> */}
       {/* <TopHeader /> */}
       <CaseDetailsTopHeader />
-      <CaseNumber />
+      <View
+        style={{
+          position: "absolute",
+          marginTop: 120,
+          width: "100%",
+          // alignSelf: "center",
+          alignItems: "center",
+        }}
+      >
+        <CaseNumber />
+      </View>
       <InviteandSupportComponent />
       <ImagesFlatlist />
+      <LocationDetailsComponent />
       {/* <BottomlocatoionModal /> */}
+      <TouchableButton icon={true} />
+      <SupportButton />
       <StatusBar style="auto" />
     </View>
   );

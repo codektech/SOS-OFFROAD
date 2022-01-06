@@ -16,7 +16,7 @@ const ImagesFlatlist = () => {
         <Image
           source={item}
           style={{
-            height: "30%",
+            height: 100,
             width: 170,
             borderRadius: 10,
             marginHorizontal: 20,
@@ -26,13 +26,15 @@ const ImagesFlatlist = () => {
     );
   };
   return (
-    <FlatList
-      showsHorizontalScrollIndicator={false}
-      data={Data}
-      renderItem={renderItem}
-      horizontal={true}
-      keyExtractor={(item) => item}
-    />
+    <View style={{ height: "15%" }}>
+      <FlatList
+        showsHorizontalScrollIndicator={false}
+        data={Data}
+        renderItem={renderItem}
+        horizontal={true}
+        keyExtractor={(item) => item}
+      />
+    </View>
   );
 };
 
