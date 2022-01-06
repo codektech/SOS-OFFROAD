@@ -43,7 +43,7 @@ export default function App() {
         <CaseNumber />
       </View> */}
       {/* <ProfileView /> */}
-      <BottomDrawerCases />
+      {/* <BottomDrawerCases /> */}
       {/* <Personalinformation /> */}
       {/* <CasesFlatlist /> */}
       {/* <CompletedComponent /> */}
