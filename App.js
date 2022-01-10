@@ -13,12 +13,14 @@ import InviteandSupportComponent from "./Src/Components/InviteandSupportComponen
 import LocationDetailsComponent from "./Src/Components/LocationDetailsComponent";
 import Personalinformation from "./Src/Components/Personalinformation";
 import ProfileView from "./Src/Components/ProfileView";
+import RegisteredUsersFlatlist from "./Src/Components/RegisteredUsersFlatlist";
 import StatusComponent from "./Src/Components/StatusComponent";
 import SupportButton from "./Src/Components/SupportButton";
 import TextInputComponent from "./Src/Components/TextInputComponent";
 import TextInputsInRow from "./Src/Components/TextInputsInRow";
 import TopHeader from "./Src/Components/TopHeader";
 import TouchableButton from "./Src/Components/TouchableButton";
+import UsersFlatlist from "./Src/Components/UsersFlatlist";
 export default function App() {
   return (
     <View style={styles.container}>
@@ -45,7 +47,9 @@ export default function App() {
       {/* <ProfileView /> */}
       {/* <BottomDrawerCases /> */}
       {/* <Personalinformation /> */}
-      {/* <CasesFlatlist /> */}
+      <CasesFlatlist />
+      {/* <UsersFlatlist /> */}
+      <RegisteredUsersFlatlist />
       {/* <CompletedComponent /> */}
       {/* <InviteandSupportComponent /> */}
       {/* <ImagesFlatlist /> */}
