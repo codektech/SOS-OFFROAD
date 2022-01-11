@@ -12,7 +12,7 @@ const Signin = () => {
         flex: 1,
         // justifyContent: "center",
         // alignItems: "center",
-        padding: 10,
+        padding: 15,
       }}
     >
       <View style={{ height: "15%" }}></View>

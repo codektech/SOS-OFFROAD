@@ -13,7 +13,7 @@ const TextInputComponent = (props) => {
     <View
       style={{
         height: 120,
-        width: "90%",
+        width: "100%",
         // justifyContent: "center",
         // backgroundColor: "yellow",
       }}
