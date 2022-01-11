@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import ColorStyles from "../../Colors/ColorStyles";
 import TextInputComponent from "../../Components/TextInputComponent";
 import TouchableButton from "../../Components/TouchableButton";
@@ -13,7 +13,7 @@ const Signin = () => {
         padding: 10,
       }}
     >
-      <View style={{ height: "20%" }}></View>
+      <View style={{ height: "15%" }}></View>
       <Text
         style={{
           color: ColorStyles.primaryColor,
@@ -52,15 +52,32 @@ const Signin = () => {
         <Text style={{ color: ColorStyles.greycolor, fontSize: 14 }}>
           Forgot Password?
         </Text>
+        <TouchableOpacity>
+          <Text
+            style={{
+              color: ColorStyles.primaryColor,
+              fontSize: 14,
+              fontWeight: "bold",
+            }}
+          >
+            Reset here
+          </Text>
+        </TouchableOpacity>
+      </View>
+      <View style={{ width: "100%", alignItems: "center" }}>
         <Text
           style={{
-            color: ColorStyles.primaryColor,
+            color: ColorStyles.greycolor,
             fontSize: 14,
-            fontWeight: "bold",
+            margin: 20,
           }}
         >
-          Reset here
+          Don't have an account?
         </Text>
+        <TouchableButton
+          bg={ColorStyles.secondaryColor}
+          text={"Create Account"}
+        />
       </View>
     </View>
   );
