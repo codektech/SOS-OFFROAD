@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
 
 const TouchableButton = (props) => {
+  const { bg, icon, text } = props;
   return (
     <TouchableOpacity
       style={{
@@ -10,7 +11,7 @@ const TouchableButton = (props) => {
         alignItems: props.icon ? null : "center",
         width: "80%",
         height: 60,
-        backgroundColor: ColorStyles.primaryColor,
+        backgroundColor: bg,
         borderRadius: 30,
       }}
     >
@@ -24,8 +25,9 @@ const TouchableButton = (props) => {
             height: "100%",
           }}
         >
-          <Text style={{ color: "white" }}>Icon</Text>
-          <Text style={{ color: "white" }}>Hello World</Text>
+          {/* <icon /> */}
+          <Text>{icon}</Text>
+          <Text style={{ color: "white", fontWeight: "bold" }}>{text}</Text>
         </View>
       ) : (
         <Text style={{ color: "white" }}>Hello World</Text>
