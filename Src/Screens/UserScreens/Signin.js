@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import ColorStyles from "../../Colors/ColorStyles";
 import TextInputComponent from "../../Components/TextInputComponent";
 import TouchableButton from "../../Components/TouchableButton";
 const Signin = () => {
+  const [signin, setSignin] = useState({ email: "", pwd: "" });
+
   return (
     <View
       style={{
@@ -28,14 +30,20 @@ const Signin = () => {
         <TextInputComponent
           heading={"Email/Username"}
           placeholder={"Enter your email"}
+          setState={setSignin}
+          state={signin}
+          name={"email"}
         />
         <TextInputComponent
           heading={"Password"}
           placeholder={"Enter your Password"}
           icon={true}
+          setState={setSignin}
+          state={signin}
+          name={"pwd"}
         />
         <TouchableButton
-          onPress={() => console.log("Login")}
+          onPress={() => console.log(signin)}
           bg={ColorStyles.primaryColor}
           text={"Login"}
         />

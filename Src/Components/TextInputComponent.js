@@ -3,9 +3,12 @@ import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
 import { Feather } from "@expo/vector-icons";
 const TextInputComponent = (props) => {
-  const { heading, placeholder, setState, state } = props;
+  const { heading, placeholder, setState, state, name } = props;
   const [focus, setFocus] = useState(false);
   const [showpassword, setShowpassword] = useState(true);
+  const handlesetState = (value, name) => {
+    setState({ ...state, [name]: value });
+  };
   return (
     <View
       style={{
@@ -33,6 +36,7 @@ const TextInputComponent = (props) => {
             secureTextEntry={showpassword}
             onFocus={() => setFocus(true)}
             onBlur={() => setFocus(false)}
+            onChangeText={(value) => handlesetState(value, name)}
           ></TextInput>
           <TouchableOpacity onPress={() => setShowpassword(!showpassword)}>
             <Feather
@@ -46,7 +50,7 @@ const TextInputComponent = (props) => {
         <TextInput
           style={{ height: 60, width: "90%", paddingLeft: 20 }}
           placeholder={placeholder}
-          secureTextEntry={showpassword}
+          onChangeText={(value) => handlesetState(value, name)}
           onFocus={() => setFocus(true)}
           onBlur={() => setFocus(false)}
         ></TextInput>
