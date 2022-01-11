@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { View, Text, TouchableOpacity, Modal, StyleSheet } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
 import { AntDesign } from "@expo/vector-icons";
-const DropdownInput = () => {
+const DropdownInput = (props) => {
+  const { expertieslevel, setExpertieslevel } = props;
   const [modalVisible, setModalVisible] = useState(false);
-  const [expertieslevel, setExpertieslevel] = useState("Intermediate");
   let levels = ["Beginner", "Intermediate", "Expert"];
   return (
     <View

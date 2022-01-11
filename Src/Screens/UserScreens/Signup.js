@@ -31,7 +31,7 @@ const Signup = () => {
       <View style={{ height: 10 }}></View>
 
       <Text style={{ fontSize: 15 }}>
-        Please Enter the following details to create an account with us
+        Please Enter the following details to Register an account with us
       </Text>
       <View style={{ height: 10 }}></View>
       <View style={{ width: "100%", alignItems: "center" }}>

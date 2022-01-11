@@ -3,8 +3,13 @@ import { View, Text, TextInput } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
 
 const TextInputsInRow = (props) => {
+  const { setState, state, name1, name2 } = props;
+
   const [focus, setFocus] = useState(false);
   const [secondfocus, setSecondfocus] = useState(false);
+  const handlesetState = (value, name) => {
+    setState({ ...state, [name]: value });
+  };
   return (
     <View
       style={{
@@ -21,9 +26,10 @@ const TextInputsInRow = (props) => {
         </Text>
         <TextInput
           style={{ height: 60, width: "90%", paddingLeft: 20 }}
-          placeholder="Hello world"
+          placeholder=" Enter Model"
           onFocus={() => setFocus(true)}
           onBlur={() => setFocus(false)}
+          onChangeText={(value) => handlesetState(value, name1)}
         ></TextInput>
         <View
           style={{
@@ -41,9 +47,10 @@ const TextInputsInRow = (props) => {
         </Text>
         <TextInput
           style={{ height: 60, width: "90%", paddingLeft: 20 }}
-          placeholder="Hello world"
+          placeholder="Enter Number"
           onFocus={() => setSecondfocus(true)}
           onBlur={() => setSecondfocus(false)}
+          onChangeText={(value) => handlesetState(value, name2)}
         ></TextInput>
         <View
           style={{

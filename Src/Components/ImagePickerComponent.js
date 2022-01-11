@@ -27,9 +27,11 @@ const ImagePickerComponent = () => {
 
     console.log("result", result);
     console.log("result.uri", result.uri);
-    await setImage(result.uri);
+    if (!result.cancelled) {
+      setImage(result.uri);
+      setImagepicked(true);
+    }
 
-    await setImagepicked(true);
     console.log("image", image);
   };
   return (

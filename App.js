@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View, ScrollView } from "react-native";
+import EligibilityRegistration from "./Src/Screens/UserScreens/EligibilityRegistration";
 import Signin from "./Src/Screens/UserScreens/Signin";
 import Signup from "./Src/Screens/UserScreens/Signup";
 import SplashScreen from "./Src/Screens/UserScreens/SplashScreen";
@@ -8,6 +9,8 @@ export default function App() {
     // <SplashScreen />
     // <WelcomeScreen />
     // <Signin />
-    <Signup />
+    // <Signup />
+
+    <EligibilityRegistration />
   );
 }
