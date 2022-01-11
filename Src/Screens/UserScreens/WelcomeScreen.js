@@ -37,6 +37,7 @@ const WelcomeScreen = () => {
         Welcome to {"\n"}SOS Offroad
       </Text>
       <TouchableButton
+        onPress={() => console.log("Login with email")}
         bg={ColorStyles.primaryColor}
         text={"Login with email"}
         icon={<MaterialCommunityIcons name="email" size={24} color="white" />}

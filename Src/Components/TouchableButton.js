@@ -3,9 +3,10 @@ import { View, Text, TouchableOpacity } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
 
 const TouchableButton = (props) => {
-  const { bg, icon, text } = props;
+  const { bg, icon, text, onPress } = props;
   return (
     <TouchableOpacity
+      onPress={onPress}
       style={{
         justifyContent: "center",
         alignItems: props.icon ? null : "center",
