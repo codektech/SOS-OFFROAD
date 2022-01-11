@@ -10,7 +10,7 @@ const TouchableButton = (props) => {
       style={{
         justifyContent: "center",
         alignItems: props.icon ? null : "center",
-        width: "80%",
+        width: "90%",
         height: 60,
         backgroundColor: bg,
         borderRadius: 30,
@@ -28,10 +28,14 @@ const TouchableButton = (props) => {
         >
           {/* <icon /> */}
           <Text>{icon}</Text>
-          <Text style={{ color: "white", fontWeight: "bold" }}>{text}</Text>
+          <Text style={{ color: "white", fontWeight: "bold", fontSize: 16 }}>
+            {text}
+          </Text>
         </View>
       ) : (
-        <Text style={{ color: "white" }}>Hello World</Text>
+        <Text style={{ color: "white", fontWeight: "bold", fontSize: 19 }}>
+          {text}
+        </Text>
       )}
     </TouchableOpacity>
   );
