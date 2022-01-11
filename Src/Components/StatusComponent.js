@@ -10,6 +10,7 @@ const StatusComponent = () => {
         backgroundColor: ColorStyles.secondaryColor,
         borderRadius: 20,
         alignItems: "center",
+        alignSelf: "center",
       }}
     >
       <View
