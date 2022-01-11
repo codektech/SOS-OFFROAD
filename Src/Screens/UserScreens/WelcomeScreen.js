@@ -4,7 +4,7 @@ import ColorStyles from "../../Colors/ColorStyles";
 import TouchableButton from "../../Components/TouchableButton";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({ navigation }) => {
   return (
     <View
       style={{
@@ -37,7 +37,7 @@ const WelcomeScreen = () => {
         Welcome to {"\n"}SOS Offroad
       </Text>
       <TouchableButton
-        onPress={() => console.log("Login with email")}
+        onPress={() => navigation.navigate("Signin")}
         bg={ColorStyles.primaryColor}
         text={"Login with email"}
         icon={<MaterialCommunityIcons name="email" size={24} color="white" />}

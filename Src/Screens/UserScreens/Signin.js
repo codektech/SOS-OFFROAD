@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 import ColorStyles from "../../Colors/ColorStyles";
 import TextInputComponent from "../../Components/TextInputComponent";
 import TouchableButton from "../../Components/TouchableButton";
-const Signin = () => {
+const Signin = ({ navigation }) => {
   const [signin, setSignin] = useState({ email: "", pwd: "" });
 
   return (
@@ -43,7 +43,7 @@ const Signin = () => {
           name={"pwd"}
         />
         <TouchableButton
-          onPress={() => console.log(signin)}
+          onPress={() => navigation.navigate("EligibilityRegistration")}
           bg={ColorStyles.primaryColor}
           text={"Login"}
         />
@@ -60,7 +60,9 @@ const Signin = () => {
         <Text style={{ color: ColorStyles.greycolor, fontSize: 14 }}>
           Forgot Password?
         </Text>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("ApplicationStatus")}
+        >
           <Text
             style={{
               color: ColorStyles.primaryColor,
@@ -83,6 +85,7 @@ const Signin = () => {
           Don't have an account?
         </Text>
         <TouchableButton
+          onPress={() => navigation.navigate("Signup")}
           bg={ColorStyles.secondaryColor}
           text={"Create Account"}
         />

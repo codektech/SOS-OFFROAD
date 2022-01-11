@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { View, Text, Image } from "react-native";
 import ColorStyles from "../../Colors/ColorStyles";
-const SplashScreen = () => {
-  // useEffect(() => {
-  //     setTimeout(() => navigation.replace("SplashScreenTwo"), 2000);
-  //   }, []);
+const SplashScreen = ({ navigation }) => {
+  useEffect(() => {
+    setTimeout(() => navigation.replace("WelcomeScreen"), 2000);
+  }, []);
   return (
     <View
       style={{
