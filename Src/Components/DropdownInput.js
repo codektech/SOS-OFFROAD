@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, Modal, StyleSheet } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
 import { AntDesign } from "@expo/vector-icons";
 const DropdownInput = (props) => {
-  const { expertieslevel, setExpertieslevel } = props;
+  const { expertieslevel, setExpertieslevel, setIndex, index } = props;
   const [modalVisible, setModalVisible] = useState(false);
   let levels = ["Beginner", "Intermediate", "Expert"];
   return (
@@ -18,7 +18,9 @@ const DropdownInput = (props) => {
         Email/Username
       </Text>
       <TouchableOpacity
-        onPress={() => setModalVisible(!modalVisible)}
+        onPress={() => {
+          setIndex(true), setModalVisible(!modalVisible);
+        }}
         style={{
           height: 60,
           width: "95%",
@@ -36,7 +38,7 @@ const DropdownInput = (props) => {
         style={{
           height: 3,
           width: "100%",
-          backgroundColor: true
+          backgroundColor: index
             ? ColorStyles.primaryColor
             : ColorStyles.greycolor,
         }}

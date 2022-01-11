@@ -14,7 +14,7 @@ const EligibilityRegistration = () => {
     equipmentsAvailable: "",
   });
   const [expertieslevel, setExpertieslevel] = useState("Intermediate");
-
+  const [index, setIndex] = useState(null);
   return (
     <View
       style={{
@@ -45,6 +45,7 @@ const EligibilityRegistration = () => {
         state={eligibilityData}
         name1={"carModel"}
         name2={"carNumber"}
+        setIndex={setIndex}
       />
       <TextInputComponent
         heading={"Equipments Available"}
@@ -52,10 +53,13 @@ const EligibilityRegistration = () => {
         setState={setEligibilityData}
         state={eligibilityData}
         name={"equipmentsAvailable"}
+        setIndex={setIndex}
       />
       <DropdownInput
         expertieslevel={expertieslevel}
         setExpertieslevel={setExpertieslevel}
+        setIndex={setIndex}
+        index={index}
       />
       <View style={{ width: "90%" }}>
         <Text style={{ color: ColorStyles.greycolor }}>
