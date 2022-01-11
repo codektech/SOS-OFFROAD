@@ -11,7 +11,7 @@ const TextInputComponent = (props) => {
   };
   const handlefocus = () => {
     setFocus(true);
-    setIndex(null);
+    setIndex ? setIndex(null) : null;
   };
   return (
     <View
