@@ -19,16 +19,25 @@ const CaseDetails = () => {
     >
       <CaseDetailsTopHeader />
       <CaseNumber />
-      <View style={{ height: "5%" }}></View>
-      <InviteandSupportComponent />
-      <ImagesFlatlist />
-      <LocationDetailsComponent />
-      <TouchableButton
-        bg={ColorStyles.primaryColor}
-        text="Call Now"
-        icon={<Feather name="phone-call" size={24} color="white" />}
-      />
-      <SupportButton />
+      <ScrollView
+        contentContainerStyle={{
+          flexGrow: 1,
+          alignItems: "center",
+        }}
+      >
+        <View style={{ height: "5%" }}></View>
+        <InviteandSupportComponent />
+        <View style={{ height: "5%" }}></View>
+        <ImagesFlatlist />
+        <LocationDetailsComponent />
+        <View style={{ height: "5%" }}></View>
+        <TouchableButton
+          bg={ColorStyles.primaryColor}
+          text="Call Now"
+          icon={<Feather name="phone-call" size={24} color="white" />}
+        />
+        <SupportButton />
+      </ScrollView>
     </View>
   );
 };
