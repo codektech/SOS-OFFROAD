@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text } from "react-native";
 import TopHeader from "../../Components/TopHeader";
 import Map from "../../Components/Map";
+import BottomDrawerCases from "../../Components//BottomDrawerCases";
 const Home = ({ navigation }) => {
+  const [modalvisible, setModalvisible] = useState(false);
   return (
     <View style={{ flex: 1 }}>
-      <TopHeader onPress={() => navigation.openDrawer()} />
-      {/* <View style={{ flex: 1 }}> */}
+      <TopHeader
+        onPress={() => navigation.openDrawer()}
+        onpressicon={() => setModalvisible(!modalvisible)}
+      />
       <Map />
-      {/* </View> */}
+      <BottomDrawerCases
+        modalvisible={modalvisible}
+        setModalvisible={setModalvisible}
+      />
     </View>
   );
 };

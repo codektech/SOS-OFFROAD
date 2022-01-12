@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
 import { Feather } from "@expo/vector-icons";
 const TopHeader = (props) => {
-  const { onPress } = props;
+  const { onPress, onpressicon } = props;
   return (
     <View
       style={{
@@ -75,7 +75,7 @@ const TopHeader = (props) => {
           }}
         >
           <Text style={{ color: "white", fontSize: 14 }}>Good Morning</Text>
-          <TouchableOpacity style={{ marginRight: 15 }}>
+          <TouchableOpacity onPress={onpressicon} style={{ marginRight: 15 }}>
             <Feather name="bell" size={24} color="white" />
           </TouchableOpacity>
         </View>
