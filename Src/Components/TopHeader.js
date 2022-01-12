@@ -2,7 +2,8 @@ import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
 import { Feather } from "@expo/vector-icons";
-const TopHeader = () => {
+const TopHeader = (props) => {
+  const { onPress } = props;
   return (
     <View
       style={{
@@ -28,6 +29,7 @@ const TopHeader = () => {
         }}
       >
         <TouchableOpacity
+          onPress={onPress}
           style={{
             height: "100%",
             width: "20%",
