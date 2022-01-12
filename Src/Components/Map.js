@@ -79,11 +79,8 @@ const Map = (props, { navigation }) => {
 };
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    width: "100%",
-    height: "100%",
   },
   map: {
     width: Dimensions.get("window").width,
