@@ -36,7 +36,7 @@ const Personalinformation = () => {
         </TouchableOpacity>
       </View>
       {Data.map((item) => (
-        <View style={{ marginBottom: 5 }}>
+        <View key={item} style={{ marginBottom: 5 }}>
           <View
             style={{
               width: "100%",
@@ -49,7 +49,7 @@ const Personalinformation = () => {
               editable={editable}
               //   value={"hamzaShabbir4213@gmail.com"}
               placeholder={item}
-              style={{ width: "40%" }}
+              style={{ width: "45%" }}
             />
           </View>
           <View

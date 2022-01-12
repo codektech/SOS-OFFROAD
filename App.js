@@ -3,12 +3,14 @@ import { NavigationContainer } from "@react-navigation/native";
 import Home from "./Src/Screens/TeamScreens/Home";
 import DrawerNavigator from "./Src/Stacks/DrawerNavigator";
 import CaseDetails from "./Src/Screens/TeamScreens/CaseDetails";
+import Cases from "./Src/Screens/TeamScreens/Cases";
 export default function App() {
   return (
     // <Home />
-    // <NavigationContainer>
-    //   <DrawerNavigator />
-    // </NavigationContainer>
-    <CaseDetails />
+    <NavigationContainer>
+      <DrawerNavigator />
+    </NavigationContainer>
+    // <CaseDetails />
+    // <Cases />
   );
 }

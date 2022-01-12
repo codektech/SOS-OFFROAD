@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
 
-const CasesFlatlist = () => {
+const CasesFlatlist = (props) => {
+  const { state, setState } = props;
   const Data = ["Pending", "Completed", "Rejected"];
-  const [state, setState] = useState("Pending");
   const renderItem = ({ item }) => {
     return (
       <TouchableOpacity

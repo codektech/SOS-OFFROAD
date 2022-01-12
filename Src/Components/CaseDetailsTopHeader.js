@@ -1,9 +1,10 @@
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import { Entypo } from "@expo/vector-icons";
-
+import { useNavigation } from "@react-navigation/native";
 const CaseDetailsTopHeader = (props) => {
-  const { icon } = props;
+  const { icon, text } = props;
+  const navigation = useNavigation();
   return (
     <View
       style={{
@@ -28,12 +29,13 @@ const CaseDetailsTopHeader = (props) => {
           }}
         >
           <TouchableOpacity
+            onPress={() => navigation.openDrawer()}
             style={{
               height: "100%",
               width: "20%",
               // backgroundColor: "black",
               justifyContent: "center",
-              marginTop: 20,
+              // marginTop: 20,
               alignItems: "center",
             }}
           >
@@ -64,7 +66,7 @@ const CaseDetailsTopHeader = (props) => {
             ></View>
           </TouchableOpacity>
           <Text style={{ color: "white", fontSize: 19, fontWeight: "bold" }}>
-            Case Details
+            {text}
           </Text>
           <TouchableOpacity style={{ marginRight: 10 }}>
             <Entypo name="dots-three-vertical" size={24} color="white" />

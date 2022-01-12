@@ -13,6 +13,8 @@ import { MaterialIcons } from "@expo/vector-icons";
 // import Support from "../Nav-Screens/Support/Support";
 // import TabNavigator from "./TabNavigator";
 import Home from "../Screens/TeamScreens/Home";
+import Cases from "../Screens/TeamScreens/Cases";
+import Profile from "../Screens/TeamScreens/Profile";
 import IonicIcon from "react-native-vector-icons/Ionicons";
 import ColorStyles from "../Colors/ColorStyles";
 const Drawer = createDrawerNavigator();
@@ -99,8 +101,8 @@ const DrawerNavigtor = () => {
       drawerContent={(props) => <CustomDrawer {...props} />}
     >
       <Drawer.Screen name="Home" component={Home} />
-      <Drawer.Screen name="Profile" component={Home} />
-      <Drawer.Screen name="Cases" component={Home} />
+      <Drawer.Screen name="Profile" component={Profile} />
+      <Drawer.Screen name="Cases" component={Cases} />
       {/* <Drawer.Screen name="Bookmarks" component={Bookmarks} />
       <Drawer.Screen name="Settings" component={Setting} />
       <Drawer.Screen name="Need Support" component={Support} /> */}
