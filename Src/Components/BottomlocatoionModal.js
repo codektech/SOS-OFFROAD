@@ -9,8 +9,9 @@ import {
   ScrollView,
 } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
-
+import { useNavigation } from "@react-navigation/native";
 const BottomlocatoionModal = (props) => {
+  const navigation = useNavigation();
   const { modalVisible, setModalVisible } = props;
   return (
     <Modal animationType="slide" transparent={true} visible={modalVisible}>
@@ -104,7 +105,7 @@ const BottomlocatoionModal = (props) => {
             <Text style={{ color: ColorStyles.primaryColor }}>REJECT </Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => setModalVisible(!modalVisible)}
+            onPress={() => navigation.navigate("CaseDetails")}
             style={{
               width: 100,
               height: 40,

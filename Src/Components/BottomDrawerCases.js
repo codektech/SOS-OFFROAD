@@ -11,7 +11,6 @@ import {
 } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
 import { Feather } from "@expo/vector-icons";
-
 const BottomDrawerCases = (props) => {
   const { modalvisible, setModalvisible } = props;
   const Data = [
