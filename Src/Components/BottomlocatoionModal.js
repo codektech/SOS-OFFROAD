@@ -10,13 +10,13 @@ import {
 } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
 
-const BottomlocatoionModal = () => {
-  const [modalVisible, setModalVisible] = useState(false);
+const BottomlocatoionModal = (props) => {
+  const { modalVisible, setModalVisible } = props;
   return (
-    <Modal animationType="slide" transparent={true} visible={true}>
+    <Modal animationType="slide" transparent={true} visible={modalVisible}>
       <View style={styles.modalView}>
         <TouchableOpacity
-          onPress={() => console.log("hi")}
+          onPress={() => setModalVisible(!modalVisible)}
           style={{
             width: "100%",
             height: 40,
@@ -89,6 +89,7 @@ const BottomlocatoionModal = () => {
           }}
         >
           <TouchableOpacity
+            onPress={() => setModalVisible(!modalVisible)}
             style={{
               width: 100,
               height: 40,
@@ -103,6 +104,7 @@ const BottomlocatoionModal = () => {
             <Text style={{ color: ColorStyles.primaryColor }}>REJECT </Text>
           </TouchableOpacity>
           <TouchableOpacity
+            onPress={() => setModalVisible(!modalVisible)}
             style={{
               width: 100,
               height: 40,
