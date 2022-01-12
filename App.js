@@ -1,11 +1,6 @@
 import { StyleSheet, Text, View, ScrollView } from "react-native";
-import UserStack from "./Src/Stacks/UserStack";
 import { NavigationContainer } from "@react-navigation/native";
-
+import Home from "./Src/Screens/TeamScreens/Home";
 export default function App() {
-  return (
-    <NavigationContainer>
-      <UserStack />
-    </NavigationContainer>
-  );
+  return <Home />;
 }
