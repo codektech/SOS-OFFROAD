@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 
 const CaseDetailsTopHeader = (props) => {
+  const { icon } = props;
   return (
     <View
       style={{
@@ -15,7 +16,7 @@ const CaseDetailsTopHeader = (props) => {
         alignItems: "center",
       }}
     >
-      {true ? (
+      {icon ? (
         <View
           style={{
             width: "100%",

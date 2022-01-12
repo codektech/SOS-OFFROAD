@@ -11,6 +11,8 @@ const CaseNumber = () => {
         backgroundColor: "#dadada",
         borderRadius: 10,
         justifyContent: "center",
+        position: "absolute",
+        marginTop: "30%",
       }}
     >
       <Text
