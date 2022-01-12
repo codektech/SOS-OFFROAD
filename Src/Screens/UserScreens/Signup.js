@@ -4,7 +4,7 @@ import ColorStyles from "../../Colors/ColorStyles";
 import TextInputComponent from "../../Components/TextInputComponent";
 import TouchableButton from "../../Components/TouchableButton";
 import { Ionicons } from "@expo/vector-icons";
-const Signup = () => {
+const Signup = ({ navigation }) => {
   const [signin, setSignin] = useState({ username: "", email: "", pwd: "" });
 
   return (
@@ -16,7 +16,10 @@ const Signup = () => {
         padding: 15,
       }}
     >
-      <TouchableOpacity style={{ height: "15%", justifyContent: "center" }}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Signin")}
+        style={{ height: "15%", justifyContent: "center" }}
+      >
         <Ionicons name="arrow-back-outline" size={24} color="black" />
       </TouchableOpacity>
       <Text
