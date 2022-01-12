@@ -24,6 +24,7 @@ const Map = (props, { navigation }) => {
         mapType="standard"
         showsUserLocation={true}
         // showsTraffic={true}
+        moveOnMarkerPress={false}
         paddingAdjustmentBehavior="never"
         showsMyLocationButton={true}
         provider={PROVIDER_GOOGLE}
