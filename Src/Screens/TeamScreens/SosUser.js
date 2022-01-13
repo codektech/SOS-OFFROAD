@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
 import ColorStyles from "../../Colors/ColorStyles";
-import TextInputsInRow from "../../Components/TextInputsInRow";
 import TextInputComponent from "../../Components/TextInputComponent";
-import DropdownInput from "../../Components/DropdownInput";
 import ImagePickerComponent from "../../Components/ImagePickerComponent";
 import TouchableButton from "../../Components/TouchableButton";
 const SosUser = () => {
@@ -13,8 +10,7 @@ const SosUser = () => {
     PhoneNumber: "",
     Description: "",
   });
-  const [expertieslevel, setExpertieslevel] = useState("Intermediate");
-  const [index, setIndex] = useState(null);
+
   return (
     <View
       style={{
