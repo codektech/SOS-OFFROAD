@@ -10,7 +10,7 @@ import SupportButton from "../../Components/SupportButton";
 import ColorStyles from "../../Colors/ColorStyles";
 import { Feather } from "@expo/vector-icons";
 const CaseDetails = ({ navigation, route }) => {
-  const { item } = route.params;
+  const item = route.params;
   console.log(item);
   return (
     <View
