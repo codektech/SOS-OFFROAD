@@ -3,7 +3,15 @@ import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
 import { Feather } from "@expo/vector-icons";
 const TextInputComponent = (props) => {
-  const { heading, placeholder, setState, state, name, setIndex } = props;
+  const {
+    heading,
+    placeholder,
+    setState,
+    state,
+    name,
+    setIndex,
+    keyboardType,
+  } = props;
   const [focus, setFocus] = useState(false);
   const [showpassword, setShowpassword] = useState(true);
   const handlesetState = (value, name) => {
@@ -52,6 +60,7 @@ const TextInputComponent = (props) => {
         </View>
       ) : (
         <TextInput
+          keyboardType={keyboardType}
           style={{ height: 60, width: "90%", paddingLeft: 20 }}
           placeholder={placeholder}
           onChangeText={(value) => handlesetState(value, name)}
