@@ -9,8 +9,9 @@ import {
 } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
 import { AntDesign } from "@expo/vector-icons";
-
+import { useNavigation } from "@react-navigation/native";
 const UsersFlatlist = () => {
+  const navigation = useNavigation();
   const Data = [
     { key: "1", username: "User Name", email: "user@user.com" },
     { key: "2", username: "User Name", email: "user@user.com" },
@@ -26,11 +27,14 @@ const UsersFlatlist = () => {
         style={{ width: Dimensions.get("screen").width, alignItems: "center" }}
       >
         <TouchableOpacity
+          onPress={() =>
+            navigation.navigate("ApplicationDetails", (item = { item }))
+          }
           style={{
             width: "90%",
             height: 100,
             backgroundColor: ColorStyles.lightGrey,
-            margin: 5,
+            margin: 10,
             alignItems: "center",
             flexDirection: "row",
             justifyContent: "space-evenly",

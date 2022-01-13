@@ -7,6 +7,7 @@ import {
 } from "@react-navigation/drawer";
 import { FontAwesome } from "@expo/vector-icons";
 import Home from "../Screens/AdminScreens/Home";
+import Applications from "../Screens/AdminScreens/Applications";
 import Cases from "../Screens/TeamScreens/Cases";
 import Profile from "../Screens/TeamScreens/Profile";
 import ColorStyles from "../Colors/ColorStyles";
@@ -79,7 +80,7 @@ const DrawerNavigtor = () => {
     >
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Cases" component={Cases} />
-      <Drawer.Screen name="Application" component={Profile} />
+      <Drawer.Screen name="Applications" component={Applications} />
       <Drawer.Screen name="Registered Users" component={Profile} />
     </Drawer.Navigator>
   );

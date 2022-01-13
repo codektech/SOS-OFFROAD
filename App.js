@@ -4,14 +4,14 @@ import Home from "./Src/Screens/TeamScreens/Home";
 import DrawerNavigator from "./Src/Stacks/DrawerNavigator";
 import CaseDetails from "./Src/Screens/TeamScreens/CaseDetails";
 import Cases from "./Src/Screens/TeamScreens/Cases";
-import TeamNavigator from "./Src/Stacks/TeamNavigator";
+import AdminNavigator from "./Src/Stacks/AdminNavigator";
 import SosUser from "./Src/Screens/TeamScreens/SosUser";
 import SosSubmitCase from "./Src/Screens/TeamScreens/SosSubmitCase";
 export default function App() {
   return (
     <>
       <NavigationContainer>
-        <TeamNavigator />
+        <AdminNavigator />
       </NavigationContainer>
       {/* <SosUser /> */}
       {/* <SosSubmitCase /> */}

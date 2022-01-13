@@ -37,43 +37,49 @@ const AdminHeader = (props) => {
             alignItems: "center",
           }}
         >
-          <TouchableOpacity
-            onPress={() => navigation.openDrawer()}
-            style={{
-              height: "100%",
-              width: "100%",
-              // backgroundColor: "black",
-              justifyContent: "center",
-              // marginTop: 20,
-              alignItems: "center",
-            }}
-          >
-            <View
+          {icon ? (
+            <TouchableOpacity onPress={() => navigation.goBack()}>
+              {icon}
+            </TouchableOpacity>
+          ) : (
+            <TouchableOpacity
+              onPress={() => navigation.openDrawer()}
               style={{
-                height: 2.5,
-                width: "30%",
-                backgroundColor: "white",
-                marginVertical: 3,
+                height: "100%",
+                width: "100%",
+                // backgroundColor: "black",
+                justifyContent: "center",
+                // marginTop: 20,
+                alignItems: "center",
               }}
-            ></View>
-            <View
-              style={{
-                height: 2.5,
-                width: "30%",
-                backgroundColor: "white",
-                marginVertical: 3,
-                marginLeft: 5,
-              }}
-            ></View>
-            <View
-              style={{
-                height: 2.5,
-                width: "30%",
-                backgroundColor: "white",
-                marginVertical: 3,
-              }}
-            ></View>
-          </TouchableOpacity>
+            >
+              <View
+                style={{
+                  height: 2.5,
+                  width: "30%",
+                  backgroundColor: "white",
+                  marginVertical: 3,
+                }}
+              ></View>
+              <View
+                style={{
+                  height: 2.5,
+                  width: "30%",
+                  backgroundColor: "white",
+                  marginVertical: 3,
+                  marginLeft: 5,
+                }}
+              ></View>
+              <View
+                style={{
+                  height: 2.5,
+                  width: "30%",
+                  backgroundColor: "white",
+                  marginVertical: 3,
+                }}
+              ></View>
+            </TouchableOpacity>
+          )}
         </View>
         <View
           style={{
