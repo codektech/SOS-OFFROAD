@@ -21,27 +21,20 @@ const CaseDetails = ({ navigation, route }) => {
     >
       <CaseDetailsTopHeader />
       <CaseNumber caseno={item.caseno} />
-      <ScrollView
-        contentContainerStyle={{
-          flexGrow: 1,
-          alignItems: "center",
-        }}
-      >
-        <View style={{ height: "5%" }}></View>
-        <InviteandSupportComponent
-          invite={item.invitesent}
-          support={item.support}
-        />
-        <View style={{ height: "5%" }}></View>
-        <ImagesFlatlist />
-        <LocationDetailsComponent description={item.description} />
-        <View style={{ height: "5%" }}></View>
-        <TouchableButton
-          bg={ColorStyles.redColor}
-          text="Archive Case"
-          icon={<Feather name="archive" size={24} color="white" />}
-        />
-      </ScrollView>
+
+      <View style={{ height: "5%" }}></View>
+      <InviteandSupportComponent
+        invite={item.invitesent}
+        support={item.support}
+      />
+      <ImagesFlatlist />
+      <LocationDetailsComponent description={item.description} />
+      <View style={{ height: "5%" }}></View>
+      <TouchableButton
+        bg={ColorStyles.redColor}
+        text="Archive Case"
+        icon={<Feather name="archive" size={24} color="white" />}
+      />
     </View>
   );
 };
