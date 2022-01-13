@@ -6,6 +6,7 @@ import CaseDetails from "./Src/Screens/TeamScreens/CaseDetails";
 import Cases from "./Src/Screens/TeamScreens/Cases";
 import TeamNavigator from "./Src/Stacks/TeamNavigator";
 import SosUser from "./Src/Screens/TeamScreens/SosUser";
+import SosSubmitCase from "./Src/Screens/TeamScreens/SosSubmitCase";
 export default function App() {
   return (
     <>
@@ -13,6 +14,7 @@ export default function App() {
       <TeamNavigator />
     </NavigationContainer> */}
       <SosUser />
+      {/* <SosSubmitCase /> */}
     </>
   );
 }
