@@ -6,7 +6,7 @@ import {
   DrawerItemList,
 } from "@react-navigation/drawer";
 import { FontAwesome } from "@expo/vector-icons";
-import Home from "../Screens/TeamScreens/Home";
+import Home from "../Screens/AdminScreens/Home";
 import Cases from "../Screens/TeamScreens/Cases";
 import Profile from "../Screens/TeamScreens/Profile";
 import ColorStyles from "../Colors/ColorStyles";
@@ -38,22 +38,6 @@ const CustomDrawer = (props) => {
       <View style={{ height: "25%" }}></View>
       <DrawerItemList {...props} />
       <View style={{ height: "10%" }}></View>
-      <View
-        style={{
-          width: "50%",
-          flexDirection: "row",
-          justifyContent: "space-evenly",
-        }}
-      >
-        <Text style={{ color: "white" }}>Availability</Text>
-        <TouchableOpacity onPress={() => setAvailability(!availability)}>
-          {availability ? (
-            <FontAwesome name="toggle-on" size={24} color="white" />
-          ) : (
-            <FontAwesome name="toggle-off" size={24} color="white" />
-          )}
-        </TouchableOpacity>
-      </View>
     </View>
   );
 };
@@ -66,7 +50,7 @@ const DrawerNavigtor = () => {
         drawerInactiveTintColor: "white",
         drawerStyle: { width: "70%" },
         drawerItemStyle: {
-          width: "60%",
+          width: "70%",
           borderBottomRightRadius: 20,
           borderTopRightRadius: 20,
         },
@@ -94,8 +78,9 @@ const DrawerNavigtor = () => {
       drawerContent={(props) => <CustomDrawer {...props} />}
     >
       <Drawer.Screen name="Home" component={Home} />
-      <Drawer.Screen name="Profile" component={Profile} />
       <Drawer.Screen name="Cases" component={Cases} />
+      <Drawer.Screen name="Application" component={Profile} />
+      <Drawer.Screen name="Registered Users" component={Profile} />
     </Drawer.Navigator>
   );
 };
