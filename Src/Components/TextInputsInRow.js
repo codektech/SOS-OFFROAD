@@ -3,7 +3,7 @@ import { View, Text, TextInput } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
 
 const TextInputsInRow = (props) => {
-  const { setState, state, name1, name2, setIndex } = props;
+  const { setState, state, name1, name2, setIndex, value1, value2 } = props;
 
   const [focus, setFocus] = useState(false);
   const [secondfocus, setSecondfocus] = useState(false);
@@ -38,6 +38,7 @@ const TextInputsInRow = (props) => {
           onFocus={handlefocus}
           onBlur={() => setFocus(false)}
           onChangeText={(value) => handlesetState(value, name1)}
+          value={value1}
         ></TextInput>
         <View
           style={{
@@ -59,6 +60,7 @@ const TextInputsInRow = (props) => {
           onFocus={handlesecondfocus}
           onBlur={() => setSecondfocus(false)}
           onChangeText={(value) => handlesetState(value, name2)}
+          value={value2}
         ></TextInput>
         <View
           style={{

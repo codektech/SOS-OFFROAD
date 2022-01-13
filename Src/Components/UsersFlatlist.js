@@ -13,13 +13,69 @@ import { useNavigation } from "@react-navigation/native";
 const UsersFlatlist = () => {
   const navigation = useNavigation();
   const Data = [
-    { key: "1", username: "User Name", email: "user@user.com" },
-    { key: "2", username: "User Name", email: "user@user.com" },
-    { key: "3", username: "User Name", email: "user@user.com" },
-    { key: "4", username: "User Name", email: "user@user.com" },
-    { key: "5", username: "User Name", email: "user@user.com" },
-    { key: "6", username: "User Name", email: "user@user.com" },
-    { key: "7", username: "User Name", email: "user@user.com" },
+    {
+      key: "1",
+      username: "User Name",
+      email: "user@user.com",
+      carmodel: "Honda 125",
+      carnumber: "Lek 1234",
+      equipmentsavailable: "No equipments yet",
+      Expertieslevel: "Beginner",
+    },
+    {
+      key: "2",
+      username: "User Name",
+      email: "user@user.com",
+      carmodel: "Honda 125",
+      carnumber: "Lek 1234",
+      equipmentsavailable: "No equipments yet",
+      Expertieslevel: "Beginner",
+    },
+    {
+      key: "3",
+      username: "User Name",
+      email: "user@user.com",
+      carmodel: "Honda 125",
+      carnumber: "Lek 1234",
+      equipmentsavailable: "No equipments yet",
+      Expertieslevel: "Beginner",
+    },
+    {
+      key: "4",
+      username: "User Name",
+      email: "user@user.com",
+      carmodel: "Honda 125",
+      carnumber: "Lek 1234",
+      equipmentsavailable: "No equipments yet",
+      Expertieslevel: "Beginner",
+    },
+    {
+      key: "5",
+      username: "User Name",
+      email: "user@user.com",
+      carmodel: "Honda 125",
+      carnumber: "Lek 1234",
+      equipmentsavailable: "No equipments yet",
+      Expertieslevel: "Beginner",
+    },
+    {
+      key: "6",
+      username: "User Name",
+      email: "user@user.com",
+      carmodel: "Honda 125",
+      carnumber: "Lek 1234",
+      equipmentsavailable: "No equipments yet",
+      Expertieslevel: "Beginner",
+    },
+    {
+      key: "7",
+      username: "User Name",
+      email: "user@user.com",
+      carmodel: "Honda 125",
+      carnumber: "Lek 1234",
+      equipmentsavailable: "No equipments yet",
+      Expertieslevel: "Beginner",
+    },
   ];
   const renderItem = ({ item }) => {
     return (
@@ -27,9 +83,7 @@ const UsersFlatlist = () => {
         style={{ width: Dimensions.get("screen").width, alignItems: "center" }}
       >
         <TouchableOpacity
-          onPress={() =>
-            navigation.navigate("ApplicationDetails", (item = { item }))
-          }
+          onPress={() => navigation.navigate("ApplicationDetails", item)}
           style={{
             width: "90%",
             height: 100,

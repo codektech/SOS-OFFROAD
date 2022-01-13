@@ -11,6 +11,8 @@ const TextInputComponent = (props) => {
     name,
     setIndex,
     keyboardType,
+    value,
+    editable,
   } = props;
   const [focus, setFocus] = useState(false);
   const [showpassword, setShowpassword] = useState(true);
@@ -66,6 +68,8 @@ const TextInputComponent = (props) => {
           onChangeText={(value) => handlesetState(value, name)}
           onFocus={handlefocus}
           onBlur={() => setFocus(false)}
+          value={value}
+          // editable={editable}
         ></TextInput>
       )}
       <View
