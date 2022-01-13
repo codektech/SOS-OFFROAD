@@ -2,7 +2,8 @@ import React from "react";
 import { View, Text } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
 
-const CaseNumber = () => {
+const CaseNumber = (props) => {
+  const { caseno } = props;
   return (
     <View
       style={{
@@ -23,7 +24,7 @@ const CaseNumber = () => {
           marginLeft: 10,
         }}
       >
-        Case#1111111
+        Case # {caseno}
       </Text>
     </View>
   );

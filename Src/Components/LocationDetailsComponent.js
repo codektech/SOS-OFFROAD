@@ -1,19 +1,14 @@
 import React from "react";
 import { View, Text, ScrollView } from "react-native";
 
-const LocationDetailsComponent = () => {
+const LocationDetailsComponent = (props) => {
+  const { description } = props;
   return (
-    <View style={{ height: "20%", width: "90%" }}>
+    <View style={{ width: "90%" }}>
       <Text style={{ fontWeight: "normal", fontSize: 19 }}>Location name</Text>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <Text style={{ marginTop: 10 }}>
-          This is the detail of location will be written by user.This is the
-          detail of location will be written by user.This is the detail of
-          location will be written by user.This is the detail of location will
-          be written by user.This is the detail of location will be written by
-          user.
-        </Text>
-      </ScrollView>
+      {/* <ScrollView showsVerticalScrollIndicator={false}> */}
+      <Text style={{ marginTop: 10 }}>{description}</Text>
+      {/* </ScrollView> */}
     </View>
   );
 };

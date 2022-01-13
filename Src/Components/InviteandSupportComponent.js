@@ -1,7 +1,8 @@
 import React from "react";
 import { View, Text } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
-const InviteandSupportComponent = () => {
+const InviteandSupportComponent = (props) => {
+  const { invite, support } = props;
   return (
     <View
       style={{
@@ -45,7 +46,7 @@ const InviteandSupportComponent = () => {
           }}
         >
           <Text style={{ color: "white", fontSize: 25, fontWeight: "bold" }}>
-            20
+            {invite}
           </Text>
         </View>
       </View>
@@ -81,7 +82,7 @@ const InviteandSupportComponent = () => {
           }}
         >
           <Text style={{ color: "white", fontSize: 25, fontWeight: "bold" }}>
-            5
+            {support}
           </Text>
         </View>
       </View>

@@ -1,7 +1,10 @@
 import React from "react";
-import { View, Text, FlatList, Image } from "react-native";
+import { View, Text, FlatList, Image, TouchableOpacity } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
+import { useNavigation } from "@react-navigation/native";
 const PendingCasesFlatlist = () => {
+  const navigation = useNavigation();
+
   const Data = [
     {
       caseno: "12345",
@@ -34,7 +37,8 @@ const PendingCasesFlatlist = () => {
   ];
   const renderItem = ({ item }) => {
     return (
-      <View
+      <TouchableOpacity
+        onPress={() => navigation.navigate("CaseDetails", item)}
         style={{
           width: "90%",
           backgroundColor: ColorStyles.lightGrey,
@@ -75,7 +79,7 @@ const PendingCasesFlatlist = () => {
             </Text>
           </View>
         </View>
-      </View>
+      </TouchableOpacity>
     );
   };
   return (
