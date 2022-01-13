@@ -84,10 +84,11 @@ const AdminHeader = (props) => {
         <View
           style={{
             height: "100%",
-            width: "65%",
+            width: "70%",
             // backgroundColor: "cyan",
             justifyContent: "center",
-            alignItems: "flex-start",
+            alignItems: "center",
+            marginRight: "10%",
           }}
         >
           <Text style={{ color: "white", fontSize: 19, fontWeight: "bold" }}>

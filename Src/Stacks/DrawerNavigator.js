@@ -8,7 +8,7 @@ import {
 import { FontAwesome } from "@expo/vector-icons";
 import Home from "../Screens/AdminScreens/Home";
 import Applications from "../Screens/AdminScreens/Applications";
-import Cases from "../Screens/TeamScreens/Cases";
+import Cases from "../Screens/AdminScreens/Cases";
 import Profile from "../Screens/TeamScreens/Profile";
 import ColorStyles from "../Colors/ColorStyles";
 const Drawer = createDrawerNavigator();
