@@ -10,10 +10,10 @@ import SosSubmitCase from "./Src/Screens/TeamScreens/SosSubmitCase";
 export default function App() {
   return (
     <>
-      {/* <NavigationContainer>
-      <TeamNavigator />
-    </NavigationContainer> */}
-      <SosUser />
+      <NavigationContainer>
+        <TeamNavigator />
+      </NavigationContainer>
+      {/* <SosUser /> */}
       {/* <SosSubmitCase /> */}
     </>
   );
