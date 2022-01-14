@@ -9,8 +9,8 @@ const Cases = () => {
     <View style={{ flex: 1 }}>
       <AdminHeader text={"CASES"} />
       <View style={{ height: "3%" }}></View>
-      <CasesFlatlist state={state} setState={setState} />
-      <PendingCasesFlatlist />
+      <CasesFlatlist state={state} setState={setState} archived={true} />
+      <PendingCasesFlatlist state={state} />
     </View>
   );
 };

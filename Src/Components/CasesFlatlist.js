@@ -3,8 +3,8 @@ import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
 
 const CasesFlatlist = (props) => {
-  const { state, setState } = props;
-  const Data = ["Pending", "Completed", "Rejected"];
+  const { state, setState, archived } = props;
+  const Data = ["Pending", "Completed", archived ? "Archived" : "Rejected"];
   const renderItem = ({ item }) => {
     return (
       <TouchableOpacity
@@ -56,7 +56,11 @@ const CasesFlatlist = (props) => {
             height: 2.5,
             width: "20%",
             marginLeft:
-              state === "Pending" ? 20 : state === "Rejected" ? 270 : null,
+              state === "Pending"
+                ? 20
+                : state === "Archived" || state === "Rejected"
+                ? 270
+                : null,
             alignSelf: state === "Completed" ? "center" : null,
           }}
         ></View>

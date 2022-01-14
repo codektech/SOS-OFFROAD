@@ -2,7 +2,8 @@ import React from "react";
 import { View, Text, FlatList, Image, TouchableOpacity } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
 import { useNavigation } from "@react-navigation/native";
-const PendingCasesFlatlist = () => {
+const PendingCasesFlatlist = (props) => {
+  const { state } = props;
   const navigation = useNavigation();
 
   const Data = [
@@ -38,7 +39,13 @@ const PendingCasesFlatlist = () => {
   const renderItem = ({ item }) => {
     return (
       <TouchableOpacity
-        onPress={() => navigation.navigate("CaseDetails", item)}
+        onPress={() => {
+          state === "Pending"
+            ? navigation.navigate("CaseDetails", item)
+            : state === "Archived"
+            ? navigation.navigate("ArchiveDetails", item)
+            : navigation.navigate("CompletedDetails", item);
+        }}
         style={{
           width: "90%",
           backgroundColor: ColorStyles.lightGrey,
@@ -71,12 +78,20 @@ const PendingCasesFlatlist = () => {
             <Text style={{ fontSize: 15 }}>{item.location}</Text>
             <Text style={{ fontSize: 15 }}>{item.description}</Text>
             <View style={{ height: 10 }}></View>
-            <Text style={{ fontSize: 15, fontWeight: "bold" }}>
-              Invites sent : {item.invitesent}
-            </Text>
-            <Text style={{ fontSize: 15, fontWeight: "bold" }}>
-              Support : {item.support}
-            </Text>
+            {state === "Pending" ? (
+              <>
+                <Text style={{ fontSize: 15, fontWeight: "bold" }}>
+                  Invites sent : {item.invitesent}
+                </Text>
+                <Text style={{ fontSize: 15, fontWeight: "bold" }}>
+                  Support : {item.support}
+                </Text>
+              </>
+            ) : state === "Archived" ? (
+              <Text style={{ fontSize: 14, color: ColorStyles.redColor }}>
+                This is the description of case will be written by user
+              </Text>
+            ) : null}
           </View>
         </View>
       </TouchableOpacity>
