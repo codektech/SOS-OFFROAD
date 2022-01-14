@@ -11,7 +11,7 @@ import ColorStyles from "../../Colors/ColorStyles";
 import { Feather } from "@expo/vector-icons";
 const CaseDetails = ({ navigation, route }) => {
   const item = route.params;
-  console.log(item);
+  // console.log(item);
   return (
     <View
       style={{
@@ -31,6 +31,7 @@ const CaseDetails = ({ navigation, route }) => {
       <LocationDetailsComponent description={item.description} />
       <View style={{ height: "5%" }}></View>
       <TouchableButton
+        onPress={() => navigation.navigate("ArchiveCase", item)}
         bg={ColorStyles.redColor}
         text="Archive Case"
         icon={<Feather name="archive" size={24} color="white" />}

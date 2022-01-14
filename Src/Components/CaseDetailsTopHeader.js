@@ -8,7 +8,7 @@ const CaseDetailsTopHeader = (props) => {
   return (
     <View
       style={{
-        height: "20%",
+        height: 150,
         width: "100%",
         backgroundColor: "black",
         borderBottomLeftRadius: 35,
