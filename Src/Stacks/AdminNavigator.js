@@ -7,6 +7,7 @@ import CaseDetails from "../../Src/Screens/AdminScreens/CaseDetails";
 import ArchiveCase from "../../Src/Screens/AdminScreens/ArchvieCase";
 import ArchiveDetails from "../../Src/Screens/AdminScreens/ArchiveDetails";
 import CompletedDetails from "../../Src/Screens/AdminScreens/CompletedDetails";
+import AdminViewUser from "../Screens/AdminScreens/AdminViewUser";
 const AdminNavigator = () => {
   const Stack = createStackNavigator();
   return (
@@ -17,6 +18,7 @@ const AdminNavigator = () => {
       <Stack.Screen name="ArchiveCase" component={ArchiveCase} />
       <Stack.Screen name="ArchiveDetails" component={ArchiveDetails} />
       <Stack.Screen name="CompletedDetails" component={CompletedDetails} />
+      <Stack.Screen name="AdminViewUser" component={AdminViewUser} />
     </Stack.Navigator>
   );
 };

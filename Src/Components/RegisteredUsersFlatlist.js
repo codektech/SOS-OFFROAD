@@ -8,7 +8,9 @@ import {
   Image,
 } from "react-native";
 import ColorStyles from "../Colors/ColorStyles";
+import { useNavigation } from "@react-navigation/native";
 const RegisteredUsersFlatlist = () => {
+  const navigation = useNavigation();
   const Data = [
     { img: require("../Images/car.jpg"), username: "Cameron Williamson" },
     { img: require("../Images/car1.jpg"), username: "Cameron Williamson" },
@@ -23,6 +25,7 @@ const RegisteredUsersFlatlist = () => {
         style={{ width: Dimensions.get("screen").width, alignItems: "center" }}
       >
         <TouchableOpacity
+          onPress={() => navigation.navigate("AdminViewUser", item)}
           style={{
             width: "90%",
             height: 100,

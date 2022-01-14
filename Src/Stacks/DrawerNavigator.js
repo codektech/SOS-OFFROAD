@@ -9,7 +9,7 @@ import { FontAwesome } from "@expo/vector-icons";
 import Home from "../Screens/AdminScreens/Home";
 import Applications from "../Screens/AdminScreens/Applications";
 import Cases from "../Screens/AdminScreens/Cases";
-import Profile from "../Screens/TeamScreens/Profile";
+import RegisteredUsers from "../Screens/AdminScreens/RegisteredUsers";
 import ColorStyles from "../Colors/ColorStyles";
 const Drawer = createDrawerNavigator();
 const CustomDrawer = (props) => {
@@ -81,7 +81,7 @@ const DrawerNavigtor = () => {
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Cases" component={Cases} />
       <Drawer.Screen name="Applications" component={Applications} />
-      <Drawer.Screen name="Registered Users" component={Profile} />
+      <Drawer.Screen name="RegisteredUsers" component={RegisteredUsers} />
     </Drawer.Navigator>
   );
 };

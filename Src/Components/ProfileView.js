@@ -10,7 +10,7 @@ const ProfileView = () => {
         flexDirection: "row",
         // justifyContent: "space-",
         // backgroundColor: "green",
-        marginTop: 30,
+        marginTop: 20,
         alignItems: "center",
       }}
     >

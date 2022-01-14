@@ -3,15 +3,16 @@ import { View, Text, TouchableOpacity, TextInput } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import ColorStyles from "../Colors/ColorStyles";
 
-const Personalinformation = () => {
+const Personalinformation = (props) => {
+  const { edit } = props;
   const Data = ["Username", "Email", "Mobile Phone", "Address"];
   const [editable, setEditable] = useState(false);
   return (
     <View
       style={{
-        marginTop: 20,
+        // marginTop: 20,
         width: "90%",
-        height: "40%",
+        height: 200,
         // backgroundColor: "black",
       }}
     >
@@ -31,9 +32,11 @@ const Personalinformation = () => {
         >
           Personal information
         </Text>
-        <TouchableOpacity onPress={() => setEditable(true)}>
-          <Feather name="edit" size={20} color="black" />
-        </TouchableOpacity>
+        {!edit ? null : (
+          <TouchableOpacity onPress={() => setEditable(true)}>
+            <Feather name="edit" size={20} color="black" />
+          </TouchableOpacity>
+        )}
       </View>
       {Data.map((item) => (
         <View key={item} style={{ marginBottom: 5 }}>
