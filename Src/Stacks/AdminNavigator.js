@@ -4,8 +4,9 @@ import { createStackNavigator } from "@react-navigation/stack";
 import DrawerNavigator from "./DrawerNavigator";
 import ApplicationDetails from "../../Src/Screens/AdminScreens/ApplicationDetails";
 import CaseDetails from "../../Src/Screens/AdminScreens/CaseDetails";
-import ArchvieCase from "../../Src/Screens/AdminScreens/ArchvieCase";
+import ArchiveCase from "../../Src/Screens/AdminScreens/ArchvieCase";
 import ArchiveDetails from "../../Src/Screens/AdminScreens/ArchiveDetails";
+import CompletedDetails from "../../Src/Screens/AdminScreens/CompletedDetails";
 const AdminNavigator = () => {
   const Stack = createStackNavigator();
   return (
@@ -13,7 +14,9 @@ const AdminNavigator = () => {
       <Stack.Screen name="DrawerNavigator" component={DrawerNavigator} />
       <Stack.Screen name="ApplicationDetails" component={ApplicationDetails} />
       <Stack.Screen name="CaseDetails" component={CaseDetails} />
+      <Stack.Screen name="ArchiveCase" component={ArchiveCase} />
       <Stack.Screen name="ArchiveDetails" component={ArchiveDetails} />
+      <Stack.Screen name="CompletedDetails" component={CompletedDetails} />
     </Stack.Navigator>
   );
 };
