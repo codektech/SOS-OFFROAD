@@ -11,7 +11,7 @@ const AdminViewUser = ({ navigation, route }) => {
   return (
     <View style={{ flex: 1, alignItems: "center" }}>
       <AdminHeader text={"REGISTERED USERS"} icon={true} />
-      <ProfileView />
+      <ProfileView username={item.username} img={item.img} />
       <Personalinformation eidt={false} />
       <View style={{ height: 5 }}></View>
       <View style={{ width: "100%", padding: 20 }}>

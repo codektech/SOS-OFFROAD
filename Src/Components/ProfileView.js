@@ -1,7 +1,8 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
 
-const ProfileView = () => {
+const ProfileView = (props) => {
+  const { img, username } = props;
   return (
     <View
       style={{
@@ -14,12 +15,9 @@ const ProfileView = () => {
         alignItems: "center",
       }}
     >
-      <Image
-        source={require("../Images/car1.jpg")}
-        style={{ height: 90, width: 90, borderRadius: 25 }}
-      />
+      <Image source={img} style={{ height: 90, width: 90, borderRadius: 25 }} />
       <Text style={{ marginLeft: 20, fontSize: 19, fontWeight: "bold" }}>
-        User Name here
+        {username}
       </Text>
     </View>
   );
