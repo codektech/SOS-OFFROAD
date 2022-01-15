@@ -10,7 +10,7 @@ const AdminViewUser = ({ navigation, route }) => {
   console.log(item);
   return (
     <View style={{ flex: 1, alignItems: "center" }}>
-      <AdminHeader text={"REGISTERED USERS"} />
+      <AdminHeader text={"REGISTERED USERS"} icon={true} />
       <ProfileView />
       <Personalinformation eidt={false} />
       <View style={{ height: 5 }}></View>
