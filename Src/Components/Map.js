@@ -70,10 +70,10 @@ const Map = (props, { navigation }) => {
         })}
       </MapView>
 
-      <BottomlocatoionModal
+      {/* <BottomlocatoionModal
         modalVisible={modalVisible}
         setModalVisible={setModalVisible}
-      />
+      /> */}
     </View>
   );
 };
