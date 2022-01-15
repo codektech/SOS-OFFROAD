@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, ScrollView } from "react-native";
 import AdminHeader from "../../Components/AdminHeader";
 import { Ionicons } from "@expo/vector-icons";
@@ -8,6 +8,7 @@ import ImagePickerComponent from "../../Components/ImagePickerComponent";
 import TouchableButton from "../../Components/TouchableButton";
 import ColorStyles from "../../Colors/ColorStyles";
 const ApplicationDetails = ({ navigation, route }) => {
+  const [index, setIndex] = useState(null);
   const item = route.params;
   console.log(item);
   return (
@@ -32,7 +33,11 @@ const ApplicationDetails = ({ navigation, route }) => {
             value={item.email}
             editable={false}
           />
-          <TextInputsInRow value1={item.carmodel} value2={item.carnumber} />
+          <TextInputsInRow
+            value1={item.carmodel}
+            value2={item.carnumber}
+            setIndex={setIndex}
+          />
           <TextInputComponent
             heading={"Equipments available"}
             value={item.equipmentsavailable}

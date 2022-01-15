@@ -8,7 +8,7 @@ const AdminHeader = (props) => {
   return (
     <View
       style={{
-        height: "20%",
+        height: 160,
         width: "100%",
         backgroundColor: bg ? bg : "black",
         borderBottomLeftRadius: 35,
