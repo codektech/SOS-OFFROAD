@@ -12,12 +12,12 @@ import { useNavigation } from "@react-navigation/native";
 const RegisteredUsersFlatlist = () => {
   const navigation = useNavigation();
   const Data = [
-    { img: require("../Images/car.jpg"), username: "Cameron Williamson" },
-    { img: require("../Images/car1.jpg"), username: "Cameron Williamson" },
+    { img: require("../Images/car.jpg"), username: "Cameron " },
+    { img: require("../Images/car1.jpg"), username: "Williamson" },
     { img: require("../Images/car2.jpg"), username: "Cameron Williamson" },
-    { img: require("../Images/car3.jpg"), username: "Cameron Williamson" },
-    { img: require("../Images/car4.jpg"), username: "Cameron Williamson" },
-    { img: require("../Images/car5.jpg"), username: "Cameron Williamson" },
+    { img: require("../Images/car3.jpg"), username: "Hamza Shabbir" },
+    { img: require("../Images/car4.jpg"), username: "Danish Ishaq" },
+    { img: require("../Images/car5.jpg"), username: "Ibjthaj Ali Butt" },
   ];
   const renderItem = ({ item }) => {
     return (

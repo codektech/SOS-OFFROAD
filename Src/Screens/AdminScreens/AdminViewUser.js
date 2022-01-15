@@ -7,7 +7,7 @@ import TouchableButton from "../../Components/TouchableButton";
 import ColorStyles from "../../Colors/ColorStyles";
 const AdminViewUser = ({ navigation, route }) => {
   const item = route.params;
-  console.log(item);
+  // console.log(item);
   return (
     <View style={{ flex: 1, alignItems: "center" }}>
       <AdminHeader text={"REGISTERED USERS"} icon={true} />
